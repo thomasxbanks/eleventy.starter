@@ -1,0 +1,161 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern"1;
+  font-size-adjust: none;
+  font-variant: normal;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  overflow-x: hidden;
+
+  @supports (scroll-behavior: smooth) {
+    scroll-behavior: smooth;
+  }
+}
+
+main,
+section {
+  display: block;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 0.75em;
+}
+
+sup {
+  top: -0.4em;
+}
+
+sub {
+  bottom: -0.4em;
+}
+
+button,
+a {
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+/* Remove _all_ animations and transitions for people that prefer not to see them */
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+nav ul,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove default styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class],
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  fill: currentColor;
+}
+
+/* Reset appearance for buttons and inputs */
+button,
+input,
+select,
+textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-play-state: paused !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

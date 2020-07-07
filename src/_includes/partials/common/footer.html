@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <small>&copy; {{context.startDate | colophon}}
+    {{ context.name }}</small>
+</footer>
+<button class="flex">
+  {% set icon = "online" %}{% include 'partials/atom/icon.html' %}
+  <b>Click me</b>
+</button>

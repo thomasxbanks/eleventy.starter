@@ -1,0 +1,14 @@
+.with-sidebar.flex {
+  .sidebar {
+    background-color: pink;
+    flex-basis: var(--width-sidebar, 20rem);
+    flex-grow: 1;
+  }
+
+  >*:not(.sidebar) {
+    background-color: paleturquoise;
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 50%;
+  }
+}

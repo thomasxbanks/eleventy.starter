@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  {% include '../partials/hero.html' %}
+  <div class="wrapper flex with-sidebar">
+    <aside class="sidebar">
+      <p>Sub navigation or something</p>
+    </aside>
+    <main class="stack">
+      {{ content | safe }}
+    </main>
+  </div>
+{% endblock %}
