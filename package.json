@@ -1,0 +1,25 @@
+{
+  "name": "eleventy.respitool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run watch:11ty\" \"npm run watch:js\" \"npm run watch:css\"",
+    "watch:11ty": "npx eleventy --serve",
+    "watch:css": "node-sass-chokidar ./src/scss -o ./dist/css --watch",
+    "watch:js": "rollup --config rollup.config.js --watch",
+    "build:html": "npx eleventy",
+    "build:js": "rollup --config rollup.config.js",
+    "build:css": "node-sass-chokidar ./src/scss -o ./dist/css",
+    "build:prod": "rm -rf ./dist/ && npm run build:html && npm run build:js && npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "concurrently": "^5.2.0",
+    "node-sass-chokidar": "^1.5.0",
+    "rollup": "^2.18.2"
+  }
+}
