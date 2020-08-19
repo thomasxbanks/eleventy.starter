@@ -1,7 +1,4 @@
 <nav class="navigation primary">
-  <ul>
-    <li>
-      <a data-active="false" href="/about/">About</a>
-    </li>
-  </ul>
+  {% set items = navigation.primary %}
+  {% include 'partials/navigation/menu.html' %}
 </nav>

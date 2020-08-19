@@ -1,0 +1,11 @@
+{% include 'partials/common/html/meta.html' %}
+{% include 'partials/common/html/styles.html' %}
+{% include 'partials/common/html/favicons.html' %}
+
+<title data-helmet>{{ title | safe }} | {{context.site.name}}</title>
+{% if description %}
+  {% set desc = description %}
+{% else %}
+  {% set desc = context.site.description %}
+{% endif %}
+<meta name="description" content="{{desc}}" data-helmet/>

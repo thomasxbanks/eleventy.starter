@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{context.language}}">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>{{ title | safe }}</title>
-    <link rel="stylesheet" href="/css/style.css">
+    {% include '../partials/common/html/index.html' %}
   </head>
   <body>
     {% include '../partials/common/masthead.html' %}
     {% block content %}
-      <main>Loading…</main>
+      <main>
+        {% include '../partials/atom/loading.html' %}
+      </main>
     {% endblock %}
     {% include '../partials/common/footer.html' %}
     {% include '../partials/common/sprites.html' %}
-    <script src="/js/index.js"></script>
+    {% include '../partials/common/scripts.html' %}
   </body>
 </html>

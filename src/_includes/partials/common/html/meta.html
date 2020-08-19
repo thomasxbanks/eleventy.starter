@@ -1,0 +1,21 @@
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+<script>
+  document.documentElement.className = document
+    .documentElement
+    .className
+    .replace(/\bno-js\b/, 'js');
+</script>
+
+<meta name="application-name" content="{{ context.site.name }}" data-name="{{ context.site.name }}" data-version="{{ pkg.version }}" data-geoid="{{ context.language}}"/>
+<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline' fonts.googleapis.com; style-src-elem fonts.googleapis.com 'self' 'unsafe-inline'; media-src *"/>
+
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="email=no">
+
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="{{context.theme}}"/>

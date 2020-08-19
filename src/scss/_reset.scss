@@ -152,6 +152,10 @@ textarea {
   font: inherit;
 }
 
+cite {
+  font-style: normal;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-play-state: paused !important;

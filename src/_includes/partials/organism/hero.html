@@ -1,0 +1,11 @@
+<figure class="hero | {{hero.size}}">
+  <img src="{{hero.image.src}}" alt="{{hero.image.alt}}">
+  {%if hero.caption %}
+    <figcaption class="flex">
+      <div class="wrapper">
+        <h1 class="ft-clr-weiss ft-sz-canon">{{hero.title | safe}}…</h1>
+        <p class="ft-clr-weiss ft-sz-pica">{{hero.introduction | safe }}</p>
+      </div>
+    </figcaption>
+  {% endif %}
+</figure>
