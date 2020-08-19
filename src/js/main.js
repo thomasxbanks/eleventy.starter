@@ -1,4 +1,5 @@
 import dev from './dev';
+import { progressiveImages } from './progressive-images';
 
 const init = async () => {
   dev();
@@ -7,6 +8,7 @@ const init = async () => {
     navigator.serviceWorker.register('../service-worker.js').then(() => {
       console.log('Service Worker Registered');
     });
+  progressiveImages([...document.querySelectorAll('[data-progressive]')]);
 };
 
 window.onload = init;
