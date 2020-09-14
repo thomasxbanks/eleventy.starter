@@ -1,0 +1,15 @@
+.card {
+
+  $min-width: 20rem;
+  --width-gutters: var(--size-primer);
+  position: relative;
+  min-width: $min-width;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: var(--color-weiss);
+  color: var(--color-nightshift);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}

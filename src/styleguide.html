@@ -1,0 +1,488 @@
+---
+title: Styleguide
+layout: 'layouts/home.html'
+description: This is an example description and should be changed before you mess up your SEO!
+hero:
+  size: half-screen
+  caption: true
+  title: Styleguide
+  introduction: A comprehensive list of the components available in the application…
+  image:
+    src: http://placedog.net/1920/1080
+    alt: Doggos and good bois!
+---
+
+<title data-helmet>{{ title | safe }} | {{context.site.name}}</title>
+<meta name="description" content="{{description}}" data-helmet/>
+
+{% include 'partials/organism/hero.html' %}
+
+<style>
+  .swatch {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 0.5em;
+    width: 33%;
+    min-width: 10rem;
+    height: 20em;
+    color: white;
+    text-shadow: 0.0625em 0.0625em 0.125em black;
+    flex-grow: 1;
+  }
+  .flex.layout-twenty-eighty pre {
+    min-width: 20rem;
+  }
+  .flex.layout-twenty-eighty {
+    --grid_gap: 0;
+  }
+  .dev-highlight .flex {
+    --grid_gap: 1.5rem !important;
+  }
+</style>
+
+<div id="toc" style="--grid_gap: 0.25rem;"></div>
+
+<section id="skip" class="wrapper gutters spacing">
+  <h2 id="swatches" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Swatches</h2>
+  <div class="flex" style="--grid_gap: 0;">
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-primary-tint);">--color-brand-primary-tint</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-primary);">--color-brand-primary</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-primary-shade);">--color-brand-primary-shade</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-secondary-tint);">--color-brand-secondary-tint</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-secondary);">--color-brand-secondary</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-secondary-shade);">--color-brand-secondary-shade</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-tertiary-tint);">--color-brand-tertiary-tint</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-tertiary);">--color-brand-tertiary</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-brand-tertiary-shade);">--color-brand-tertiary-shade</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-nightshift);">--color-nightshift</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-boulder);">--color-boulder</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-concrete);">--color-concrete</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-alabaster);">--color-alabaster</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-whitesmoke);">--color-whitesmoke</div>
+    <div class="swatch ft-sz-pica" style="background-color: var(--color-weiss);">--color-weiss</div>
+  </div>
+</section>
+
+<style>
+  .dev-highlight .flex > * {
+    outline: 1px solid var(--color-brand-primary);
+    background-color: var(--color-nightshift);
+    color: var(--color-foreground);
+    padding: 2rem;
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<section class="wrapper gutters spacing dev-highlight">
+  <h2 id="layout" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Layout</h2>
+  <div>
+    <pre>.flex.layout-even</pre>
+    <div class="flex layout-even spacing">
+      <div>Full width</div>
+    </div>
+    <div class="flex layout-even spacing">
+      <div>One-half</div>
+      <div>One-half</div>
+    </div>
+    <div class="flex layout-even spacing">
+      <div>One-third</div>
+      <div>One-third</div>
+      <div>One-third</div>
+    </div>
+    <div class="flex layout-even spacing">
+      <div>One-quarter</div>
+      <div>One-quarter</div>
+      <div>One-quarter</div>
+      <div>One-quarter</div>
+    </div>
+  </div>
+  <div>
+    <pre>.flex.layout-fifty-fifty</pre>
+    <div class="flex layout-fifty-fifty spacing">
+      <div>Half</div>
+      <div>Half</div>
+    </div>
+  </div>
+  <div>
+    <pre>.flex.layout-thirty-seventy</pre>
+    <div class="flex layout-thirty-seventy spacing">
+      <div>One-third</div>
+      <div>Two-thirds</div>
+    </div>
+  </div>
+  <div>
+    <pre>.flex.layout-seventy-thirty</pre>
+    <div class="flex layout-seventy-thirty spacing">
+      <div>Two-thirds</div>
+      <div>One-third</div>
+    </div>
+  </div>
+  <div>
+    <pre>.flex.layout-twenty-eighty</pre>
+    <div class="flex layout-twenty-eighty spacing">
+      <div>One-fifth</div>
+      <div>Four-fifths</div>
+    </div>
+  </div>
+</section>
+<section class="wrapper gutters spacing">
+  <h2 id="copy" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Copy</h2>
+  <div class="spacing">
+    <h3 id="font-family" data-section class="ft-fc-accent ft-sz-paragon spacing">Font Family</h3>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-fc-accent</pre>
+      <div class="ft-fc-accent ft-sz-primer ft-wt-pound">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias debitis, minima asperiores harum ducimus dicta nostrum a modi mollitia? Debitis nihil temporibus vitae, iste dolorem iure ad quos aperiam.</div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-fc-main</pre>
+      <div class="ft-fc-main ft-sz-primer ft-wt-pound">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam id soluta consequatur voluptas saepe cum a autem molestiae, voluptatum earum, non sint, nostrum assumenda nulla molestias libero cumque atque praesentium!</div>
+    </div>
+  </div>
+  <div class="spacing">
+    <h3 id="font_size" data-section class="ft-fc-accent ft-sz-paragon spacing">Font Size</h3>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-canon</pre>
+      <div class="ft-sz-canon">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-trafalgar</pre>
+      <div class="ft-sz-trafalgar">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-paragon</pre>
+      <div class="ft-sz-paragon">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-doublepica</pre>
+      <div class="ft-sz-doublepica">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-primer</pre>
+      <div class="ft-sz-primer">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-brezier</pre>
+      <div class="ft-sz-brezier">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-pica</pre>
+      <div class="ft-sz-pica">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-minion</pre>
+      <div class="ft-sz-minion">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-sz-demipica</pre>
+      <div class="ft-sz-demipica">
+        <p class="ft-fc-accent">Lorem ipsum dolor sit amet.</p>
+        <p class="ft-fc-main">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </div>
+  <div class="spacing">
+    <h3 id="font_weight" data-section class="ft-fc-accent ft-sz-paragon spacing">Font Weight</h3>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-wt-ounce</pre>
+      <p class="ft-wt-ounce">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, cum repellendus natus, unde fugiat sunt consequatur ex et, ab cumque hic a. Alias, pariatur culpa? Nobis laudantium repellendus eaque nostrum!</p>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-wt-pound</pre>
+      <p class="ft-wt-pound">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, cum repellendus natus, unde fugiat sunt consequatur ex et, ab cumque hic a. Alias, pariatur culpa? Nobis laudantium repellendus eaque nostrum!</p>
+    </div>
+    <div class="flex layout-twenty-eighty spacing">
+      <pre>.ft-wt-stone</pre>
+      <p class="ft-wt-stone">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, cum repellendus natus, unde fugiat sunt consequatur ex et, ab cumque hic a. Alias, pariatur culpa? Nobis laudantium repellendus eaque nostrum!</p>
+    </div>
+  </div>
+  <div class="stack spacing intro-paragraph">
+    <h3 id="example-body-copy" data-section class="ft-fc-accent ft-sz-paragon spacing">Example body copy</h3>
+    <p>Blanditiis non, neque officia deserunt assumenda quas dolores voluptatem, suscipit laboriosam nesciunt quia fugiat eveniet quasi ducimus veniam harum sequi magni similique totam beatae obcaecati ratione. Dignissimos ratione impedit atque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur <strong>adipisicing elit</strong>. Porro, voluptate. Alias, repellat provident dolores beatae aspernatur dolor facilis eligendi. Ipsam expedita ipsum possimus debitis officiis, reiciendis sequi molestiae facilis soluta!</p>
+    <p>Inventore eligendi dolorem maiores voluptas cupiditate pariatur, <em>molestiae neque ratione</em> itaque, fugit facere tempora quos perspiciatis! Asperiores provident repellendus consequatur nostrum, deleniti, amet itaque vero numquam, aliquam ea modi pariatur!</p>
+    <p>Ipsa incidunt officia repellendus repellat dolor <a href="/">maxime reprehenderit</a> cupiditate quam excepturi veniam, molestiae vel. Delectus quia vitae harum in id labore aperiam ut repellat, sit alias veritatis quos possimus omnis!</p>
+  </div>
+</section>
+
+<div class="wrapper gutters">
+  <h2 id="images" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Images</h2>
+  <div class="spacing">
+    <h3 class="ft-fc-accent ft-sz-paragon">Full bleed</h3>
+    <br>
+    {% set src = 'http://placedog.net/1920/1080' %}
+    {% set width = 1920 %}
+    {% set height = 1080 %}
+    {% set alt = 'Doog!' %}
+    {% set classes = 'full-bleed' %}
+    {% include "partials/atom/image.html" %}
+  </div>
+  <div class="spacing">
+    <h3 class="ft-fc-accent ft-sz-paragon">Content width</h3>
+    <br>
+    {% set src = 'http://placedog.net/1600/900' %}
+    {% set width = 1600 %}
+    {% set height = 900 %}
+    {% set alt = 'Good boi' %}
+    {% set classes = '' %}
+    {% include "partials/atom/image.html" %}
+  </div>
+</div>
+<section class="page-section spacing full-bleed" data-colorscheme="light">
+  <div class="wrapper gutters">
+    <h2 id="form" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Form</h2>
+    <form class="stack">
+      <fieldset class="stack">
+        <legend class="ft-wt-stone">Personal Information</legend>
+        <label for="firstname">
+          <p class="ft-sz-pica">First name</p><input class="ft-sz-brezier" type="text"></label>
+        <label for="middlename">
+          <p class="ft-sz-pica">Middle name</p><input class="ft-sz-brezier" type="text"></label>
+        <label for="lastname">
+          <p class="ft-sz-pica">Last name</p>
+          <input class="ft-sz-brezier" type="text"></label>
+      </fieldset>
+      <fieldset class="stack">
+        <legend class="ft-wt-stone">Contact Information</legend>
+        <label for="phonenumber">
+          <p class="ft-sz-pica">Phone number</p><input class="ft-sz-brezier" type="text" inputhint="phonenumber"></label>
+        <label for="emailaddress">
+          <p class="ft-sz-pica">Email address</p><input class="ft-sz-brezier" type="email"></label>
+      </fieldset>
+      <fieldset class="stack">
+        <legend class="ft-wt-stone">Social Media Information</legend>
+        <label for="social-twitter">
+          <p class="ft-sz-pica">Twitter</p><input class="ft-sz-brezier" type="text"></label>
+        <label for="social-website">
+          <p class="ft-sz-pica">Website</p><input class="ft-sz-brezier" type="url"></label>
+      </fieldset>
+      <fieldset>
+        <div class="flex centered-vt">
+          <button type="submit" class="button lrg default primary">Submit</button>
+          <button type="reset" class="button sml ghost tertiary">Reset</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
+
+<section class="wrapper gutters spacing">
+  <h2 id="bio" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Bio</h2>
+  {% set user = {
+    name: 'Thomas Banks',
+    twitter: 'thomasxbanks',
+    bio: "When I'm not building things for the internet, I take photos of stuff. Code Janitor. 1x Engineer.",
+    image: 'https://en.gravatar.com/userimage/96771654/e0b166e395010f91fbebcb34f97a8413.jpg?size=400'
+  } %}
+  {% bio user %}
+</section>
+
+<section class="wrapper gutters spacing" style="--grid_gap: 1vw;">
+  <h2 id="buttons" data-section class="ft-fc-accent ft-sz-trafalgar spacing">Buttons</h2>
+  <pre>
+           .button
+    Style: .default || .ghost
+    Size:  .sml     || .med       || .lrg
+    Color: .primary || .secondary || .tertiary
+  </pre>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml default primary">Click me!</button>
+    <button class="button med default primary">Click me!</button>
+    <button class="button lrg default primary">Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml default secondary">Click me!</button>
+    <button class="button med default secondary">Click me!</button>
+    <button class="button lrg default secondary">Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml default tertiary">Click me!</button>
+    <button class="button med default tertiary">Click me!</button>
+    <button class="button lrg default tertiary">Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml ghost primary">Click me!</button>
+    <button class="button med ghost primary">Click me!</button>
+    <button class="button lrg ghost primary">Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml ghost secondary">Click me!</button>
+    <button class="button med ghost secondary">Click me!</button>
+    <button class="button lrg ghost secondary">Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml ghost tertiary">Click me!</button>
+    <button class="button med ghost tertiary">Click me!</button>
+    <button class="button lrg ghost tertiary">Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml default primary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button med default primary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button lrg default primary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml default secondary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button med default secondary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button lrg default secondary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml default tertiary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button med default tertiary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button lrg default tertiary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml ghost primary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button med ghost primary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button lrg ghost primary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml ghost secondary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button med ghost secondary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button lrg ghost secondary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+  </div>
+  <div class="flex centered-hz centered-vt">
+    <button class="button sml ghost tertiary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button med ghost tertiary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+    <button class="button lrg ghost tertiary with-icon">
+      {% set icon = 'online' %}
+      {% include 'partials/atom/icon.html' %}
+      Click me!</button>
+  </div>
+</section>
+
+<div class="page-section full-bleed" data-colorscheme="light">
+  <section class="wrapper gutters spacing">
+    <h2 id="cards" data-section class="ft-fc-accent ft-sz-trafalgar spacing">
+      Cards
+    </h2>
+    <style>
+      .card {
+        flex-basis: 25%;
+      }
+      .card:first-of-type {
+        flex-basis: 100%;
+      }
+    </style>
+    <div class="flex">
+      {% for post in styleguide.posts %}
+        {% include 'partials/molecule/card.html' %}
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<script>
+  const makeTOC = (section, list, toc) => {
+    const {id, innerText} = section
+    const anchor = document.createElement('a')
+    anchor.href = `#${id}`
+    section.style.paddingTop = `calc(${window
+      .getComputedStyle(toc, null)
+      .getPropertyValue('height')} + ${window
+      .getComputedStyle(section, null)
+      .getPropertyValue('height')})`
+    section.insertAdjacentElement('beforebegin', anchor)
+    console.log(section.innerText, section.previousElementSibling)
+    anchor.innerText = innerText
+    anchor
+      .classList
+      .add('button', 'med', 'default', 'secondary')
+    list.insertAdjacentElement('beforeend', anchor)
+  }
+  const toc = document.querySelector('#toc')
+  toc.style.position = 'sticky'
+  toc.style.top = 0
+  toc.style.zIndex = 40000
+  toc.style.background = 'var(--color-weiss)'
+  const wrapper = document.createElement('div')
+  const list = document.createElement('div')
+  wrapper
+    .classList
+    .add('wrapper', 'gutters', 'spacing')
+  list
+    .classList
+    .add('flex', 'centered-hz', 'centered-vt')
+  wrapper.insertAdjacentElement('afterbegin', list)
+  toc.insertAdjacentElement('afterbegin', wrapper)
+  const sections = [...document.querySelectorAll('[data-section]')]
+  sections.forEach(section => makeTOC(section, list, toc))
+</script>

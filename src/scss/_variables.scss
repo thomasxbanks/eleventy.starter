@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Caveat';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Caveat-Regular.woff') format('woff'),
+    url('../fonts/Caveat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Frutiger';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/FrutigerLTComRoman.woff') format('woff'),
+    url('../fonts/FrutigerLTComRoman.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Dyslexia';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/opendyslexic-regular-webfont.woff2') format('woff')
+}
+
+:root {
+  --color-brand-primary: goldenrod;
+  --color-brand-primary-shade: darkgoldenrod;
+  --color-brand-primary-tint: lightgoldenrodyellow;
+
+  --color-brand-secondary: crimson;
+  --color-brand-secondary-shade: darkred;
+  --color-brand-secondary-tint: pink;
+
+  --color-brand-tertiary: rebeccapurple;
+  --color-brand-tertiary-shade: rgb(65, 24, 105);
+  --color-brand-tertiary-tint: rgb(208, 175, 241);
+
+  --color-nightshift: black;
+  --color-boulder: dimgray;
+  --color-concrete: gray;
+  --color-alabaster: lightgray;
+  --color-whitesmoke: whitesmoke;
+  --color-weiss: white;
+
+  --color-background: rgba(255, 255, 255, 0.9);
+  --color-foreground: #010110;
+
+
+  --color-background-scrollbar: var(--color-background);
+  --color-foreground-scrollbar: var(--color-foreground);
+  --width-scrollbar: 0.5rem;
+
+  --width-central: 1280px;
+  --width-gutter: 5vw;
+
+  --grid_gap: 1.5rem;
+  --stack_gap: 1.5em;
+
+  --baseline: 1rem;
+
+  --size-canon: calc(var(--baseline) * 3);
+  --size-trafalgar: calc(var(--baseline) * 2.75);
+  --size-paragon: calc(var(--baseline) * 2.5);
+  --size-doublepica: calc(var(--baseline) * 2);
+  --size-primer: calc(var(--baseline) * 1.5);
+  --size-brezier: calc(var(--baseline) * 1.25);
+  --size-pica: calc(var(--baseline) * 1);
+  --size-minion: calc(var(--baseline) * 0.75);
+  --size-demipica: calc(var(--baseline) * 0.5);
+
+  --font_weight-ounce: 200;
+  --font_weight-pound: 400;
+  --font_weight-stone: 900;
+
+  --font_face-accent: 'Caveat', Georgia, 'Times New Roman', Times, serif;
+  --font_face-main: 'Frutiger', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+
+[data-colorscheme="none"],
+[data-colorscheme="default"],
+[data-colorscheme="white"] {
+  --color-background: var(--color-weiss);
+  --color-foreground: rgba(0, 0, 0, 0.9);
+}
+
+[data-colorscheme="dark"] {
+  --color-background: #010110;
+  --color-foreground: rgba(255, 255, 255, 0.9);
+}
+
+[data-colorscheme="light"] {
+  --color-background: var(--color-whitesmoke);
+  --color-foreground: rgba(0, 0, 0, 0.9);
+}
+
+[data-colorscheme="brand-primary"] {
+  --color-background: var(--color-brand-primary);
+  --color-foreground: rgba(0, 0, 0, 0.9);
+}
+
+[data-colorscheme="dyslexia"] {
+  --font_face-accent: 'Open Dyslexia';
+  --font_face-main: 'Open Dyslexia';
+  --color-background: palegoldenrod;
+  --color-foreground: dimgray;
+  --baseline: 1.25rem;
+}

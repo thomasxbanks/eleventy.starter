@@ -1,0 +1,101 @@
+.ft-clr-weiss {
+  color: white;
+}
+
+.ft-sz-canon {
+  font-size: var(--size-canon);
+}
+
+.ft-sz-trafalgar {
+  font-size: var(--size-trafalgar);
+}
+
+.ft-sz-paragon {
+  font-size: var(--size-paragon);
+}
+
+.ft-sz-doublepica {
+  font-size: var(--size-doublepica);
+}
+
+.ft-sz-primer {
+  font-size: var(--size-primer);
+}
+
+.ft-sz-brezier {
+  font-size: var(--size-brezier);
+}
+
+.ft-sz-pica {
+  font-size: var(--size-pica);
+}
+
+.ft-sz-minion {
+  font-size: var(--size-minion);
+}
+
+.ft-sz-demipica {
+  font-size: var(--size-demipica);
+}
+
+.ft-fc-main {
+  font-family: var(--font_face-main);
+}
+
+.ft-fc-accent {
+  font-family: var(--font_face-accent);
+}
+
+.ft-wt-ounce {
+  font-weight: var(--font_weight-ounce);
+}
+
+.ft-wt-pound {
+  font-weight: var(--font_weight-pound);
+}
+
+.ft-wt-stone {
+  font-weight: var(--font_weight-stone);
+}
+
+.ft-lh-fine {
+  line-height: 1em;
+}
+
+.ft-lh-slim {
+  line-height: 1.33em;
+}
+
+.ft-lh-mean {
+  line-height: 1.5em;
+}
+
+.ft-lh-wide {
+  line-height: 1.66em;
+}
+
+.ft-lh-vast {
+  line-height: 2em;
+}
+
+p {
+  max-width: 67ch;
+  line-height: 1.5em;
+}
+
+.intro-paragraph {
+  p:first-of-type {
+
+    font-weight: var(--font_weight-ounce);
+    font-size: 1.25em;
+    max-width: calc(67ch / 1.25);
+
+    &:first-line {
+      // @TODO: Think of something cool to go here!
+    }
+
+    &:first-letter {
+      // @TODO: Think of something cool to go here!
+    }
+  }
+}

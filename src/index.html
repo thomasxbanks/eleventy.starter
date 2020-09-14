@@ -1,16 +1,18 @@
 ---
-title: Hello world! 🤓
+title: Doggos and good bois!
 layout: 'layouts/home.html'
 description: This is an example description and should be changed before you mess up your SEO!
+hero:
+  size: full-screen
+  caption: true
+  title: Doggos and good bois!
+  introduction: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime alias, eos quas quisquam sit odio explicabo.
+  image:
+    src: http://placedog.net/1920/1080
+    alt: Doggos and good bois!
 ---
 
 <title data-helmet>{{ title | safe }} | {{context.site.name}}</title>
 <meta name="description" content="{{description}}" data-helmet/>
 
-<h1 style="text-align: center;" class="spacing | ft-fc-accent ft-sz-canon">{{title}}</h1>
-{% set src = 'http://placekitten.com/1024/450' %}
-{% set width = 1024 %}
-{% set height = 450 %}
-{% set alt = 'Kittens!!!' %}
-{% set classes = 'full-bleed' %}
-{% include 'partials/atom/image.html' %}
+{% include 'partials/organism/hero.html' %}

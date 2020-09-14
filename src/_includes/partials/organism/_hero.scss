@@ -1,0 +1,28 @@
+.hero {
+  overflow: hidden;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &.full-screen {
+    height: 100vh;
+  }
+
+  &.half-screen {
+    height: 50vh;
+  }
+
+  &.thumbnail {
+    height: 20rem;
+  }
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,12 +1,10 @@
-<figure style="position: relative;">
+{% set size = height ~ ':' ~ width %}
+<figure class="aspect-ratio {{classes}}" style="padding-bottom: {{size | aspectRatio}};">
   <img
     data-progressive
     loading="lazy"
     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
     data-src="{{src}}"
     alt="{{alt}}"
-    width="{{width}}"
-    height="{{height}}"
-    class="{{classes}}"
 />
 </figure>

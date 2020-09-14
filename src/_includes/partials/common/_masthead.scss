@@ -1,0 +1,33 @@
+.masthead {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.masthead a {
+  color: var(--color-foreground);
+}
+
+.masthead .flex a[href="/"] {
+  margin-right: auto;
+}
+
+.masthead nav ul {
+  @extend .flex;
+  --grid_gap: 0.25rem;
+}
+
+.masthead nav a[data-active="true"] {
+  border-bottom-color: var(--color-brand-primary);
+}
+
+.masthead nav a {
+  --stroke-border: 0.125rem;
+  text-decoration: none;
+  padding-top: var(--stroke-border);
+  border-bottom: var(--stroke-border) solid rgba(255, 255, 255, 0);
+}

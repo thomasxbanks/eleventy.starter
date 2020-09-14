@@ -1,10 +1,9 @@
-<figure class="hero | {{hero.size}}">
-  <img src="{{hero.image.src}}" alt="{{hero.image.alt}}">
+<figure class="hero | {{hero.size}}" style="background-image: url({{hero.image.src}});">
   {%if hero.caption %}
-    <figcaption class="flex">
-      <div class="wrapper">
-        <h1 class="ft-clr-weiss ft-sz-canon">{{hero.title | safe}}…</h1>
-        <p class="ft-clr-weiss ft-sz-pica">{{hero.introduction | safe }}</p>
+    <figcaption class="overlay">
+      <div class="wrapper gutters spacing stack">
+        <h1 class="ft-fc-accent ft-clr-weiss ft-sz-canon">{{hero.title | safe}}</h1>
+        <p class="ft-fc-main ft-clr-weiss ft-sz-pica">{{hero.introduction | safe }}</p>
       </div>
     </figcaption>
   {% endif %}

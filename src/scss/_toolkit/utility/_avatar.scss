@@ -1,0 +1,16 @@
+.avatar {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+
+  >* {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:after {
+    content: "";
+    padding-bottom: 100%;
+  }
+}

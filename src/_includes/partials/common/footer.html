@@ -1,7 +1,12 @@
 <footer class="site-footer wrapper gutters spacing">
   <cite class="ft-sz-minion">
+    {{ context.colophon.copy | safe }}
+    <br>
     &copy;
-    {{context.colophon.startDate | colophon}}
-    {{ context.colophon.name }}
+    {{ context.colophon.startDate | colophon }}
+    {{ context.colophon.name }}. All rights reserved.
+    <br>
+    {% medicalApproval context.medicalApproval %}
   </cite>
+  <a class="sr-only" href="#skip">Skip to content</a>
 </footer>

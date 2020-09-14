@@ -1,0 +1,20 @@
+{% set src = post.image.src %}
+{% set width = post.image.width %}
+{% set height = post.image.height %}
+{% set alt = post.image.alt %}
+{% set classes = '' %}
+
+<article class="card stack shadow i-{{loop.index0}}">
+  {% include "partials/atom/image.html" %}
+  <header class="stack">
+    <h2 class="ft-fc-main ft-sz-primer ft-lh-fine ft-wt-stone gutters">{{post.title}}</h2>
+  </header>
+  <div class="content stack gutters">
+    {{post.excerpt | safe}}
+  </div>
+  <footer class="stack gutters spacing" style="margin-top: auto;">
+    <div class="flex centered-vt">
+      <a href="/{{post.link}}" class="button med default primary breakout">Read more</a>
+    </div>
+  </footer>
+</article>
