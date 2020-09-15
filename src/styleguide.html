@@ -269,20 +269,35 @@ hero:
         <label for="lastname">
           <p class="ft-sz-pica">Last name</p>
           <input class="ft-sz-brezier" type="text"></label>
+        <label for="dateofbirth">
+          <p class="ft-sz-pica">Date of Birth</p>
+          <p class="ft-sz-minion">Please use the format Date/Month/Year. For example, 02/02/1987.</p>
+          <input class="ft-sz-brezier" type="text" inputmode="numeric"></label>
       </fieldset>
       <fieldset class="stack">
         <legend class="ft-wt-stone">Contact Information</legend>
         <label for="phonenumber">
-          <p class="ft-sz-pica">Phone number</p><input class="ft-sz-brezier" type="text" inputhint="phonenumber"></label>
+          <p class="ft-sz-pica">Phone number</p><input class="ft-sz-brezier" type="text" inputmode="tel"></label>
         <label for="emailaddress">
-          <p class="ft-sz-pica">Email address</p><input class="ft-sz-brezier" type="email"></label>
+          <p class="ft-sz-pica">Email address</p>
+          <input class="ft-sz-brezier" type="email">
+        </label>
+        <label for="location">
+          <p class="ft-sz-pica">Location</p>
+          <input class="ft-sz-brezier" type="text" list="countries">
+          <datalist id="countries">
+            {% for country in countries %}
+              <option value="{{country.name}}"/>
+            {% endfor%}
+          </datalist>
+        </label>
       </fieldset>
       <fieldset class="stack">
         <legend class="ft-wt-stone">Social Media Information</legend>
         <label for="social-twitter">
-          <p class="ft-sz-pica">Twitter</p><input class="ft-sz-brezier" type="text"></label>
+          <p class="ft-sz-pica">Twitter</p><input class="ft-sz-brezier" type="text" inputmode="email"></label>
         <label for="social-website">
-          <p class="ft-sz-pica">Website</p><input class="ft-sz-brezier" type="url"></label>
+          <p class="ft-sz-pica">Website</p><input class="ft-sz-brezier" type="url" inputmode="url"></label>
       </fieldset>
       <fieldset>
         <div class="flex centered-vt">

@@ -1,36 +1,37 @@
- {
-   "name": "eleventy.starter",
-   "version": "1.0.0",
-   "description": "",
-   "main": "index.js",
-   "scripts": {
-     "start": "concurrently \"npm run watch:11ty\" \"npm run watch:js\" \"npm run watch:css\"",
-     "watch:11ty": "npx eleventy --serve",
-     "watch:css": "node-sass-chokidar ./src/scss -o ./dist/css --watch",
-     "watch:js": "rollup --config rollup.config.js --watch",
-     "build:html": "npx eleventy",
-     "build:js": "rollup --config rollup.config.js",
-     "build:css": "node-sass-chokidar ./src/scss -o ./dist/css",
-     "build:prod": "rm -rf ./dist/ && npm run build:html && npm run build:js && npm run build:css"
-   },
-   "keywords": [],
-   "author": "",
-   "license": "ISC",
-   "dependencies": {
-     "@11ty/eleventy": "^0.11.0",
-     "@quasibit/eleventy-plugin-schema": "^1.0.0",
-     "@quasibit/eleventy-plugin-sitemap": "^2.0.0",
-     "@rollup/plugin-commonjs": "^15.0.0",
-     "@rollup/plugin-node-resolve": "^9.0.0",
-     "concurrently": "^5.2.0",
-     "eleventy-plugin-helmet": "^0.2.1",
-     "isomorphic-fetch": "^2.2.1",
-     "lxl.utils": "^1.2.1",
-     "moment": "^2.27.0",
-     "node-fetch": "^2.6.0",
-     "node-sass-chokidar": "^1.5.0",
-     "rollup": "^2.18.2",
-     "rollup-plugin-json": "^4.0.0",
-     "rollup-plugin-node-globals": "^1.4.0"
-   }
- }
+{
+  "name": "eleventy.starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run watch:11ty\" \"npm run watch:js\" \"npm run watch:css\"",
+    "watch:11ty": "npx eleventy --serve",
+    "watch:css": "node-sass-chokidar ./src/scss -o ./dist/css --watch",
+    "watch:js": "rollup --config rollup.config.js --watch",
+    "build:html": "npx eleventy",
+    "build:js": "rollup --config rollup.config.js",
+    "build:css": "node-sass-chokidar ./src/scss -o ./dist/css",
+    "build:prod": "rm -rf ./dist/ && npm run build:html && npm run build:js && npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@quasibit/eleventy-plugin-schema": "^1.0.0",
+    "@quasibit/eleventy-plugin-sitemap": "^2.0.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "concurrently": "^5.2.0",
+    "eleventy-plugin-helmet": "^0.2.1",
+    "isomorphic-fetch": "^2.2.1",
+    "lxl.countries": "^1.0.8",
+    "lxl.utils": "^1.2.1",
+    "moment": "^2.27.0",
+    "node-fetch": "^2.6.0",
+    "node-sass-chokidar": "^1.5.0",
+    "rollup": "^2.18.2",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-globals": "^1.4.0"
+  }
+}
