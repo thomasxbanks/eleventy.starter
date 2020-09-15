@@ -1,0 +1,106 @@
+html[data-colorscheme="day"] {
+  --color-background: var(--color-weiss);
+  --color-foreground: rgba(0, 0, 0, 0.9);
+  --color-background-card: var(--color-weiss);
+  --color-foreground-card: var(--color-nightshift);
+
+  [data-colorscheme="none"],
+  [data-colorscheme="default"],
+  [data-colorscheme="white"] {}
+
+  [data-colorscheme="dark"] {
+    --color-background: #010110;
+    --color-foreground: rgba(255, 255, 255, 0.9);
+  }
+
+  [data-colorscheme="light"] {
+    --color-background: var(--color-whitesmoke);
+    --color-foreground: rgba(0, 0, 0, 0.9);
+  }
+
+  [data-colorscheme="brand-primary"] {
+    --color-background: var(--color-brand-primary);
+    --color-foreground: rgba(0, 0, 0, 0.9);
+  }
+
+  [data-colorscheme="dyslexia"] {
+    --font_face-accent: 'Open Dyslexia';
+    --font_face-main: 'Open Dyslexia';
+    --color-background: palegoldenrod;
+    --color-foreground: dimgray;
+    --baseline: 1.25rem;
+  }
+}
+
+html[data-colorscheme="night"] {
+  --color-background: #010110;
+  --color-foreground: rgba(255, 255, 255, 0.9);
+
+  --color-background-card: rgba(255, 255, 255, 0.3);
+  --color-foreground-card: var(--color-foreground);
+
+  [data-colorscheme="none"],
+  [data-colorscheme="default"],
+  [data-colorscheme="white"] {
+    --color-background: #050510;
+  }
+
+  [data-colorscheme="dark"] {
+    --color-background: #010110;
+  }
+
+  [data-colorscheme="light"] {
+    --color-background: #030310;
+  }
+
+  [data-colorscheme="brand-primary"] {
+    --color-background: var(--color-brand-primary-shade);
+    --color-foreground: rgba(0, 0, 0, 0.9);
+  }
+
+  [data-colorscheme="dyslexia"] {
+    --font_face-accent: 'Open Dyslexia';
+    --font_face-main: 'Open Dyslexia';
+    --color-background: palegoldenrod;
+    --color-foreground: dimgray;
+  }
+}
+
+html[data-colorscheme="dyslexia"] {
+  --font_face-accent: 'Open Dyslexia';
+  --font_face-main: 'Open Dyslexia';
+  --color-background: palegoldenrod;
+  --color-foreground: dimgray;
+
+  --color-background-card: rgba(255, 255, 255, 0.25);
+  --color-foreground-card: var(--color-foreground);
+
+  [data-colorscheme="none"],
+  [data-colorscheme="default"],
+  [data-colorscheme="white"] {
+    --color-background: rgb(233, 229, 190);
+    --color-foreground: dimgray;
+  }
+
+  [data-colorscheme="dark"] {
+    --color-background: rgb(167, 163, 120);
+    --color-foreground: dimgray;
+  }
+
+  [data-colorscheme="light"] {
+    --color-background: rgb(236, 232, 186);
+    --color-foreground: dimgray;
+  }
+
+  [data-colorscheme="brand-primary"] {
+    --color-background: var(--color-brand-primary);
+    --color-foreground: var(--color-nightshift);
+  }
+
+  [data-colorscheme="dyslexia"] {
+    --font_face-accent: 'Open Dyslexia';
+    --font_face-main: 'Open Dyslexia';
+    --color-background: palegoldenrod;
+    --color-foreground: dimgray;
+  }
+}

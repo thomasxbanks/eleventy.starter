@@ -83,33 +83,3 @@
   "Segoe UI Emoji",
   "Segoe UI Symbol"
 }
-
-[data-colorscheme="none"],
-[data-colorscheme="default"],
-[data-colorscheme="white"] {
-  --color-background: var(--color-weiss);
-  --color-foreground: rgba(0, 0, 0, 0.9);
-}
-
-[data-colorscheme="dark"] {
-  --color-background: #010110;
-  --color-foreground: rgba(255, 255, 255, 0.9);
-}
-
-[data-colorscheme="light"] {
-  --color-background: var(--color-whitesmoke);
-  --color-foreground: rgba(0, 0, 0, 0.9);
-}
-
-[data-colorscheme="brand-primary"] {
-  --color-background: var(--color-brand-primary);
-  --color-foreground: rgba(0, 0, 0, 0.9);
-}
-
-[data-colorscheme="dyslexia"] {
-  --font_face-accent: 'Open Dyslexia';
-  --font_face-main: 'Open Dyslexia';
-  --color-background: palegoldenrod;
-  --color-foreground: dimgray;
-  --baseline: 1.25rem;
-}

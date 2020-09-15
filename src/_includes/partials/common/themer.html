@@ -1,0 +1,76 @@
+<style>
+  .fancy-radio {
+    display: inline-block;
+    vertical-align: middle;
+    margin-inline-end: 1ch;
+  }
+  .fancy-radio span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    pointer-events: none;
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: dodgerblue;
+    color: transparent;
+    transition: color ease 150ms;
+  }
+  .fancy-radio input {
+    position:absolute;
+  }
+  .fancy-radio input:checked+span {
+    color: dodgerblue;
+  }
+  label { cursor: pointer; margin-inline-end: 2ch; padding:0; }
+</style>
+
+<form id="themer" class="flex layout-even" style="max-width: 30rem;">
+  <label for="theme-light" class="ft-sz-minion">
+    <div class="fancy-radio">
+      <input type="radio" name="themer-option" value="day">
+      <span>✓</span>
+    </div>
+    Day
+  </label>
+  <label for="theme-dark" class="ft-sz-minion">
+    <div class="fancy-radio">
+      <input type="radio" name="themer-option" value="night" checked>
+      <span>✓</span>
+    </div>
+    Night
+  </label>
+  <label for="theme-dyslexia" class="ft-sz-minion">
+    <div class="fancy-radio">
+      <input type="radio" name="themer-option" value="dyslexia">
+      <span>✓</span>
+    </div>
+    Dyslexia
+  </label>
+</form>
+
+<script>
+  const updateTheme = (event) => {
+    const { target } = event
+    const input = target.querySelector('[name]')
+    const { value } = input
+    document.documentElement.dataset.colorscheme = value
+    input.checked = true
+    localStorage.setItem('colorscheme', value)
+  }
+  console.log('--- document.forms', document.forms)
+  const themer = [...document.forms].filter(f => f.id === 'themer')[0]
+  console.log('--- document.forms.themer', themer)
+  const options = [...themer.querySelectorAll('label')]
+  options.forEach(option => {
+    console.log('--- option', option)
+    option.addEventListener('click', updateTheme)
+  })
+
+  window.addEventListener('load', () => {
+    const value = localStorage.getItem('colorscheme')
+    document.documentElement.dataset.colorscheme = value || 'night'
+  })
+</script>

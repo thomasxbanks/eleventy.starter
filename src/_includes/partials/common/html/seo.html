@@ -1,0 +1,32 @@
+{% set canonicalUrl = context.site.canonicalUrl + page.url %}
+
+<link rel="canonical" href="{{ canonicalUrl }}">
+
+{# Social meta #}
+{% if section == "articles" %}
+  <meta property="og:type" content="blog">
+{% else %}
+  <meta property="og:type" content="website">
+{% endif %}
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description or context.site.description }}">
+<meta property="og:site_name" itemprop="name" content="{{ context.site.name }}">
+<meta property="og:locale" content="{{ context.language }}">
+<meta property="og:locale:alternate" content="{{ context.language_alternative }}">
+<meta property="og:image" content="{{ hero.image.src or context.hero.image.src }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+{# Twitter card #}
+{% if section == "home" %}
+  <meta name="twitter:card" content="summary_large_image">
+{% else %}
+  <meta name="twitter:card" content="summary">
+{% endif %}
+<meta name="twitter:site" content="{{ context.site.name }}">
+<meta name="twitter:creator" content="{{ context.twitter.creator }}">
+<meta name="twitter:url" content="{{ canonicalUrl }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description or context.site.description }}">
+<meta name="twitter:image" content="{{ hero.image.src or context.hero.image.src }}">
