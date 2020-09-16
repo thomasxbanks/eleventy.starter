@@ -1,3 +1,12 @@
+const slugify = (text) => text.toString().toLowerCase().trim()
+  .normalize('NFD') // separate accent from letter
+  .replace(/[\u0300-\u036f]/g, '') // remove all separated accents
+  .replace(/\s+/g, '-') // replace spaces with -
+  .replace(/&/g, '-and-') // replace & with 'and'
+  .replace(/_/g, '-') // replace '_' with '-'
+  .replace(/[^\w\-]+/g, '') // remove all non-word chars
+  .replace(/\-\-+/g, '-') // replace multiple '-' with single '-'
+;
 
 const styleguide = {
   posts: [
@@ -113,5 +122,10 @@ const styleguide = {
     },
   ],
 };
+
+styleguide.posts.map((post) => {
+  post.link = slugify(post.title);
+  return post;
+});
 
 module.exports = styleguide;

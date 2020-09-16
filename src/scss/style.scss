@@ -47,4 +47,6 @@ pre {
   font-size: var(--size-brezier);
   line-height: 2em;
   color: var(--color-foreground);
+  max-width: 100%;
+  overflow: auto;
 }

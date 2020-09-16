@@ -271,7 +271,7 @@ hero:
           <input class="ft-sz-brezier" type="text"></label>
         <label for="dateofbirth">
           <p class="ft-sz-pica">Date of Birth</p>
-          <p class="ft-sz-minion">Please use the format Date/Month/Year. For example, 02/02/1987.</p>
+          <p class="ft-sz-minion">Please use the format Date-Month-Year. For example, 02-02-1987.</p>
           <input class="ft-sz-brezier" type="text" inputmode="numeric"></label>
       </fieldset>
       <fieldset class="stack">
@@ -287,7 +287,7 @@ hero:
           <input class="ft-sz-brezier" type="text" list="countries">
           <datalist id="countries">
             {% for country in countries %}
-              <option value="{{country.name}}"/>
+              <option value="{{country.name | safe}}"/>
             {% endfor%}
           </datalist>
         </label>
@@ -477,7 +477,7 @@ hero:
       .getPropertyValue('height')})`
     section.insertAdjacentElement('beforebegin', anchor)
     console.log(section.innerText, section.previousElementSibling)
-    anchor.innerText = innerText
+    anchor.innerText = innerText.indexOf('Styleguide') !== -1 ? 'Hero' : innerText
     anchor
       .classList
       .add('button', 'med', 'default', 'secondary')
@@ -498,6 +498,6 @@ hero:
     .add('flex', 'centered-hz', 'centered-vt')
   wrapper.insertAdjacentElement('afterbegin', list)
   toc.insertAdjacentElement('afterbegin', wrapper)
-  const sections = [...document.querySelectorAll('[data-section]')]
+  const sections = [...document.querySelectorAll('figure.hero'), ...document.querySelectorAll('[data-section]')]
   sections.forEach(section => makeTOC(section, list, toc))
 </script>
