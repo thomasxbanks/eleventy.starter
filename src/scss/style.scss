@@ -43,9 +43,10 @@ body {
 }
 
 pre {
-  font-family: 'Dank Mono', monospace;
+  font-family: var(--font_face-code);
   font-size: var(--size-brezier);
   line-height: 2em;
+  background-color: rgba(255, 255, 255, 0.5);
   color: var(--color-foreground);
   max-width: 100%;
   overflow: auto;
